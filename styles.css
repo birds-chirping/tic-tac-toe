@@ -1,0 +1,49 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 0.2fr 1fr auto;
+}
+
+header {
+    background-color: slateblue;
+    color: gold;
+    font-size: 3rem;
+    display: grid;
+    place-content: center;
+}
+
+main {
+    display: grid;
+    justify-items: center;
+    padding-top: min(3rem, 10vw);
+    background-color: gold;
+}
+
+.board {
+    width: min(400px, 70vmin);
+    height: min(400px, 70vmin);
+    display: grid;
+    grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+    border: 0.25vmin solid  blue;
+}
+
+.cell {
+    background-color: white;
+    border: 0.25vmin solid  blue;
+}
+
+footer {
+    background-color: slateblue;
+    display: grid;
+    place-content: center;
+}
+
+.github-icon {
+    max-width: 2rem;
+}
