@@ -21,7 +21,43 @@ header {
 main {
     display: grid;
     justify-items: center;
+    align-items: baseline;
     padding-top: min(3rem, 10vw);
+    background-color: gold;
+    background-color: #f1f1f1;
+
+}
+
+.boardWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+    background-color: #f1f1f1;
+    background-color: rgba(255, 217, 0, 0.678);
+    background-color: rgba(223, 221, 214, 0.678);
+    border-radius: 1rem;
+    box-shadow: 0rem 0rem 0.4rem #525252;
+    padding: 2rem;
+}
+
+.display {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.player1,
+.player2 {
+    flex: 1;
+    text-align: center;
+    padding: 0.5rem ;
+    border-radius: 0.2rem;
+    background-color: #f1f1f1;
+    box-shadow: 0.1rem 0.1rem 0.3rem 0.1rem #5252526b;
+}
+
+.selected-player {
+    background-color: slateblue;
     background-color: gold;
 }
 
@@ -30,12 +66,33 @@ main {
     height: min(400px, 70vmin);
     display: grid;
     grid-template: repeat(3, 1fr) / repeat(3, 1fr);
-    border: 0.25vmin solid  blue;
+    gap: max(3px, 0.5vmin);
+    border-radius: 0.2rem;
+    overflow: hidden;
+    background-color: slateblue;
+    box-shadow: 0.1rem 0.1rem 0.3rem 0.1rem #5252526b;
+    position: relative;
+}
+
+
+.end-screen{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: none;
+    place-items: center;
 }
 
 .cell {
-    background-color: white;
-    border: 0.25vmin solid  blue;
+    background-color: #f1f1f1;
+    display: grid;
+    place-items: center;
+    font-size: 3rem;
+}
+
+.controller {
+    display: flex;
+    justify-content: space-around;
 }
 
 footer {

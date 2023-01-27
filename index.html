@@ -13,9 +13,30 @@
     </header>
 
     <main>
-        <div class="display"></div>
-        <div class="board"></div>
-        <div class="restart"></div>
+        <div class="boardWrapper">
+            <div class="display">
+                <div class="player1 selected-player">Player 1</div>
+                <div class="player2">Player 2</div>
+            </div>
+
+            <div class="board">
+                <div class="end-screen"></div>
+            </div>
+            
+            <div class="controller">
+                <div class="sign">
+                    <label for="sign">Choose sign: </label>
+                    <select name="sign" id="sign">
+                        <option value="x" selected>x</option>
+                        <option value="o">o</option>
+                    </select>
+                </div>
+                <div class="reset-btn">
+                    <button>Reset</button>
+                </div>
+            </div>
+
+        </div>
     </main>
     <footer>
             <img class="github-icon" src="./img/gitlogo.png" alt="GitHub logo">
