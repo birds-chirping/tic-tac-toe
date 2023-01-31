@@ -12,6 +12,19 @@
     padding: 0;
 }
 
+
+a:link, a:visited {
+    color: gold;
+    text-decoration: none;
+    font-family: 'modernline', serif;
+    font-weight: 900;
+    font-size: 1.3rem;
+}
+
+a:hover {
+    color: white;
+}
+
 body {
     height: 100vh;
     display: grid;
@@ -129,7 +142,6 @@ select:disabled {
 
 .disabled {
     background-color: rgb(209, 204, 192);
-
 }
 
 .board {
@@ -187,8 +199,11 @@ select:disabled {
 
 footer {
     background-color: slateblue;
-    display: grid;
-    place-content: center;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 0.5rem;
+    padding: 0.5rem;
 }
 
 .github-icon {
