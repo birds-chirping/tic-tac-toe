@@ -34,12 +34,13 @@ const Cell = (id) => {
     function _clickEvent() {
         if (!cell.textContent) {
             let player = gamePlay.getActivePlayer();
-            cell.textContent = player.sign;
+            cell.textContent = player.sign.toUpperCase();
             player.updateCells(id);
             gamePlay.checkWin(player);
             gamePlay.togglePlayer();
             document.getElementById('sign').setAttribute('disabled', true);
             document.getElementById('sign2').setAttribute('disabled', true);
+            document.querySelectorAll('.custom-arrow').forEach((arrow) => arrow.classList.add('disabled'));
         }
     }
 
@@ -141,6 +142,7 @@ const gamePlay = (function() {
     function _newGame() {
         signOption.removeAttribute('disabled');
         signOption2.removeAttribute('disabled');
+        document.querySelectorAll('.custom-arrow').forEach((arrow) => arrow.classList.remove('disabled'));
         _hideEndScreen();
         if (activePlayer == player2) togglePlayer();
         player1.reset();
